@@ -13,6 +13,9 @@ pen = turtle.Turtle()
 pen.pensize(3)
 pen.speed(50)
 
+pen2 = turtle.Turtle()
+pen2.pensize(3)
+pen2.speed(50)
 # ##create house
 # #front
 pen.penup()
@@ -181,6 +184,43 @@ pen.lt(g)
 pen.begin_fill()
 pen.circle(50)
 pen.end_fill()
-
 pen.shapesize(0.1)
-turtle.exitonclick()
+
+pen2.penup()
+pen2.goto(-350,0)
+pen2.pendown()
+pen2.fillcolor('cornsilk')
+pen2.begin_fill()
+for i in range(4):
+    pen2.fd(100)
+    pen2.rt(90)
+
+pen2.penup()
+pen2.goto(-450,0)
+pen2.pendown()
+
+
+for i in range(4):
+    pen2.fd(100)
+    pen2.rt(90)
+
+pen2.penup()
+pen2.goto(-550,0)
+pen2.pendown()
+
+
+for i in range(4):
+    pen2.fd(100)
+    pen2.rt(90)
+pen2.end_fill()
+
+pen2.begin_fill()
+pen2.penup()
+pen2.goto(-400,70)
+pen2.pendown()
+pen2.circle(60)
+pen2.end_fill()
+pen2.lt(90)
+pen2.fd(120)
+
+turtle.done()
