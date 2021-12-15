@@ -8,7 +8,7 @@ t.setup(1530,800,0,0)
 t.pensize(3)
 # Tốc độ vẽ
 t.speed(100)
-# Tất cả màu 
+# Tất cả màu
 t.colormode(255)
 
 def elip():
@@ -31,6 +31,6 @@ def elip():
 def main():
     elip()
     t.exitonclick()
-    
+
 if __name__ == '__main__':
     main()
