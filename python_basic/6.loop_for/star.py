@@ -7,8 +7,6 @@ t.title("star")
 t.bgcolor("black")
 # Đồ dày của bút
 t.pensize(2)
-# Màu bút
-t.color("blue")
 # Tốc độ vẽ
 t.speed(0)
 # Màu vẽ
