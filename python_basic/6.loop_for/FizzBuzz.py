@@ -3,12 +3,15 @@ def Input():
     return start_end
     
 def fizz_buzz():
+    # xét 2 số có ép kiểu được số nguyên không
     try:
+        # số đầu tiên, số cuối ép kiểu thành số nguyên
         start, end = map(int,Input())
+        # xét điều kiện cho 2 số đầu, cuối 
         if start > end:
             print("End number < start number. Try again")
         else:
-            print('Begin'.center(20, "*"))
+            print('Begin'.center(20, "*"))        
             for i in range (start, end + 1):
                 if i % 3 == 0 or i % 5 ==0:
                     if i % 3 == 0 and i % 5 == 0:
@@ -22,6 +25,7 @@ def fizz_buzz():
             else:
                 print('End'.center(20, '*'))
     except:
+        # 2 số không phải số nguyên
         print("Error")
 
 def main():
