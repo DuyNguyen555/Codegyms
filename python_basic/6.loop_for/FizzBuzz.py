@@ -3,7 +3,7 @@ def Input():
     return start_end
 
 def fizz_buzz():
-    # xét 2 số có ép kiểu được số nguyên không
+    # xét 2 số có ép kiểu được số nguyên không hoặc quá 2 số
     try:
         # số đầu tiên, số cuối ép kiểu thành số nguyên
         start, end = map(int,Input())
