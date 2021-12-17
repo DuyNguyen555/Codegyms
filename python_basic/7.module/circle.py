@@ -4,6 +4,7 @@ import math
 def draw(r):
     """Hàm vẽ hình tròn với bán kính r"""
     t.speed(1)
+    t.pensize(3)
     t.hideturtle()
     t.pencolor('red')
     t.circle(r)
