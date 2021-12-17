@@ -14,8 +14,9 @@ def area(r):
     return math.pi * r * r
 
 def main():
-    r = int(input("Enter radius: "))
-    print(area(r))
+    r = float(input("Enter radius: "))
+    S = area(r)
+    print(f"Area of the circle: {S}")
     draw(r)
 
 if __name__ == '__main__':
