@@ -34,7 +34,7 @@ def game():
             print("You lost")
         else:
             print("You win")
-        
+
 def main():
     while True:
         game()
@@ -43,7 +43,6 @@ def main():
             continue
         else:
             break
-        
-    
+
 if __name__ == '__main__':
     main()
