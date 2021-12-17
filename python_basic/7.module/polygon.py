@@ -5,7 +5,6 @@ t.pensize(3)
 t.color("skyblue")
 # ẩn bút
 t.hideturtle()
-t.setup(1400,800,0,0)
 
 def Polygon(num, edge = 100):
     angle = (num - 2) * 180 / num
