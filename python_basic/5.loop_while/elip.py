@@ -12,6 +12,7 @@ t.speed(100)
 t.colormode(255)
 
 def elip():
+    # Bán kinh
     r = 200
     # Góc quay
     rotation_angle = 0
