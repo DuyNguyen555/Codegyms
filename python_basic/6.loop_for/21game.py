@@ -6,7 +6,7 @@ def game():
     current_number = 0
     # Lựa chọn người chơi
     chose_player = int(randint(0,1))
-    
+
     while current_number < 21:
         # Người chơi chọn
         if chose_player == 0:
@@ -38,8 +38,8 @@ def game():
 def main():
     while True:
         game()
-        n = input("Play again: Enter 'y' " )
-        if n == 'y':
+        play = input("Play again: Enter 'y' " )
+        if play == 'y':
             continue
         else:
             break
