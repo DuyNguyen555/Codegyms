@@ -18,6 +18,7 @@ def elip():
     rotation_angle = 0
     
     while rotation_angle < 36:
+        #  màu có tọa độ (0, 0, 0) là màu đen trùng với màu nền nên loại tọa độ màu này ra
         t.color(randint(1,255),randint(1,255),randint(1,255))
         # Vẽ elip
         count = 0
