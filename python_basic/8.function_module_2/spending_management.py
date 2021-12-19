@@ -1,5 +1,5 @@
 expenses = []
-    
+
 def add_item(myTempList, item):
     myTempList.append(item)
 
