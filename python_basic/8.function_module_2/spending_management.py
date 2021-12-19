@@ -1,4 +1,3 @@
-expenses = []
 
 def add_item(myTempList, item):
     myTempList.append(item)
@@ -18,10 +17,12 @@ def remove_item(myTempList, item_name):
         print(item_name + " not in list")
 
 def main():
+    expenses = []
     while True:
         print("What do you want to do? -\n"\
-            "1. Add\n" \
-            "2. Remove")
+            "1. Add\n"\
+            "2. Remove\n"\
+            "3. Close")
         option = int(input("Select option 1 or 2: "))
         if option == 3:
             break
@@ -32,8 +33,10 @@ def main():
             cost_input = int(input("Item cost: "))
             date_input = input("Date: ")
             item = {'name': name_input, 'cost':cost_input, 'date':date_input}
-            add_item(expenses, item) 
-            print("Your expenses: ", expenses)
+            add_item(expenses, item)
+            length = len(expenses)
+            for i in range(length):
+                print(f"Name: {expenses[i]['name']}, spend: {expenses[i]['cost']}, date: {expenses[i]['date']}")
 
         elif option == 2:
             remove_item(expenses, name_input)
