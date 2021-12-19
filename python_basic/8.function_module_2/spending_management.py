@@ -23,7 +23,10 @@ def main():
             "1. Add\n" \
             "2. Remove")
         option = int(input("Select option 1 or 2: "))
-        name_input = input("Item name: ")
+        if option == 3:
+            break
+        else:
+            name_input = input("Item name: ")
 
         if option == 1:
             cost_input = int(input("Item cost: "))
@@ -35,8 +38,6 @@ def main():
         elif option == 2:
             remove_item(expenses, name_input)
             print("Your expenses: ", expenses)
-        elif option == 3:
-            break
         else:
             print("Invalid input")
 
