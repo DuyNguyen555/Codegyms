@@ -13,6 +13,7 @@ def game():
             player = "human"
             print(f"Player: {player}")
             while True:
+                # Nhập đầu vào của người chơi
                 human_number = str((input("Number: ")))
                 if human_number in limit_number:
                     break
