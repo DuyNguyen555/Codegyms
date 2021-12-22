@@ -1,6 +1,23 @@
 import turtle as t
 from random import choice
 
+def Race():
+    race = t.Turtle()
+    race.speed(0)
+    race.hideturtle()
+    race.rt(90)
+    race.penup()
+    for i in range(1,21):
+        race.goto(x = -300 + 20*i, y = 220)
+        race.pendown()
+        race.write(i)
+        for j in range(10):
+            race.fd(20)
+            race.penup()
+            race.fd(10)
+            race.pendown()
+        race.write(i)
+
 def AllTurtle():
     # Biến dùng để lưu tất cả rùa
     global all_turtle
@@ -8,6 +25,7 @@ def AllTurtle():
     # Màu rùa
     color_turtle = ['red', 'black', 'green', 'blue']
     # Tọa độ đặt rùa
+    global position_x
     position_x = -300
     position_y = [-30, 30, 90, 150]
     # Khởi tạo rùa
@@ -33,6 +51,7 @@ def TurtleRunning(turtle):
             run = False
 
 def main():
+    Race()
     AllTurtle()
     TurtleRunning(all_turtle)
     t.exitonclick()
