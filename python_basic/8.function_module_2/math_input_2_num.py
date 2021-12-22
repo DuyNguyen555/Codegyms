@@ -18,16 +18,12 @@ def main():
 
     if option == '+':
         print(number_1, "+", number_2, "=", add(number_1, number_2))
-
     elif option == '-':
         print(number_1, "-", number_2, "=", subtract(number_1, number_2))
-
     elif option == '*':
         print(number_1, "*", number_2, "=", multiply(number_1, number_2))
-
     elif option == '/':
         print(number_1, "/", number_2, "=", divide(number_1, number_2))
-
     else:
         print("Error")
 
