@@ -1,14 +1,16 @@
 import turtle as t
 from random import choice
+# Làm phần 2 của cuộc đua của loài rùa
+import datetime
 
 def Race():
     race = t.Turtle()
     race.speed(0)
     race.hideturtle()
     race.rt(90)
-    race.penup()
     for i in range(1,21):
-        race.goto(x = -300 + 20*i, y = 220)
+        race.penup()
+        race.goto(x = -320 + 20*i, y = 220)
         race.pendown()
         race.write(i)
         for j in range(10):
@@ -23,9 +25,9 @@ def AllTurtle():
     global all_turtle
     all_turtle = []
     # Màu rùa
+    global color_turtle
     color_turtle = ['red', 'black', 'green', 'blue']
     # Tọa độ đặt rùa
-    global position_x
     position_x = -300
     position_y = [-30, 30, 90, 150]
     # Khởi tạo rùa
@@ -41,12 +43,19 @@ def AllTurtle():
         all_turtle.append(turtle)
 
 def TurtleRunning(turtle):
+    global finish
+    finish = [0, 0, 0, 0]
     # Khoảng cách rùa chạy được trong 1 bước chạy
     speed_turtle = [5, 10, 15, 20, 25]
     run = True
     while run:
+        count = 0
         for i in turtle:
-            i.fd(choice(speed_turtle))
+            speed = choice(speed_turtle)
+            n = finish[count] + speed
+            finish[count] = n
+            i.fd(speed)
+            count += 1
         if i.xcor() > 100:
             run = False
 
