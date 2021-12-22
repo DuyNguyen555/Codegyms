@@ -56,7 +56,7 @@ def Turtle_running(turtle):
             i.fd(choice(speed_turtle))
             i.pendown()
             i.fd(choice(speed_turtle))
-        if i.xcor() > 150 :
+        if i.xcor() > 100 :
             run = False
 
 def main():
