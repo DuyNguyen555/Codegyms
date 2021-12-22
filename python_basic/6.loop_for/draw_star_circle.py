@@ -22,7 +22,7 @@ def star():
             t.fd(lenght)
             t.rt(angle)
         t.rt(5)
-        
+
 def main():
     star()
     t.exitonclick()
