@@ -3,7 +3,7 @@ def number():
     num = input("Input number: ")
     for i in num:
         print(text[int(i)], end =' ')
-
+    
 def main():
     number()
     
