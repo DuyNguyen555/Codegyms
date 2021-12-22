@@ -6,10 +6,10 @@ def triangle_star():
         else:
             print("*"*i)
             i -= 1
-            
+
 def greet(name,counter):
     return f"Hi, {name}!", counter + 1
-    
+
 def main():
     # triangle_star()
 #    cach 1
