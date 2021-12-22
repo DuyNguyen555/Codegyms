@@ -23,6 +23,7 @@ def game():
         else:
             # Máy chọn
             player = "computer"
+            # Giới hạn máy chọn từ 1->3
             computer_number = int(randint(1,3))
             print(f"Player: {player}\nNumber: {computer_number}")
             current_number += computer_number
