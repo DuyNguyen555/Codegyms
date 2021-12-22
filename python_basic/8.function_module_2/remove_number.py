@@ -3,7 +3,6 @@ def remove_largest_number(num):
     """
     Xóa phần tử lớn nhất
     """
-
     # Sắp xếp từ nhỏ đến lớn rồi lấy giá trị cuối
     sort = sorted(num)[-1]
     # Xóa giá trị đó trong tham số num
