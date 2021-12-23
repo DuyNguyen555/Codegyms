@@ -6,6 +6,6 @@ def number():
 
 def main():
     number()
-    
+
 if main():
     main()
