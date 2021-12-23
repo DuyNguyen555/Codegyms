@@ -1,7 +1,7 @@
 import turtle as t
 from random import choice
 # Làm phần 2 của cuộc đua của loài rùa
-import datetime
+import time
 
 def Race():
     race = t.Turtle()
@@ -43,11 +43,15 @@ def AllTurtle():
         all_turtle.append(turtle)
 
 def TurtleRunning(turtle):
-    global finish
+    global finish, finish_time
+    # Làm phần 2 của cuộc đua của loài rùa
     finish = [0, 0, 0, 0]
     # Khoảng cách rùa chạy được trong 1 bước chạy
     speed_turtle = [5, 10, 15, 20, 25]
     run = True
+    # Làm phần 2 của cuộc đua của loài rùa
+    # Bắt đầu đếm thời gian
+    start_time = time.time()
     while run:
         count = 0
         for i in turtle:
@@ -58,6 +62,9 @@ def TurtleRunning(turtle):
             count += 1
         if i.xcor() > 100:
             run = False
+    end_time = time.time()
+    finish_time = end_time - start_time
+    
 
 def main():
     Race()
