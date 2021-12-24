@@ -25,6 +25,7 @@ def race_track():
     race.rt(180)
 
 def full_turtle():
+                
     # lưu tất cả rùa vào list
     global all_turtle
     all_turtle = []
