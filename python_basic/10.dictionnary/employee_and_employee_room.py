@@ -31,7 +31,7 @@ if __name__ == '__main__':
     1005: dict(name="Samson", doj='01-02-89', dept=101),
     1006: dict(name="Anrex",  doj='01-05-85', dept=None)
     }
-    
+
     # Phòng làm của nhân viên hiện tại
     department_database = {
       101 : 'HRD',
