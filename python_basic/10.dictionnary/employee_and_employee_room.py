@@ -43,9 +43,9 @@ if __name__ == '__main__':
      }
 
     id_employee = int(input('Please enter employee ID: '))
-    
+
     employee_data = GetEmployeeInformation(id_employee)
     print(employee_data)
-    
+
     if employee_data:
         DisplayEmployData(employee_data)
