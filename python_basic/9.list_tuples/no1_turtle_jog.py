@@ -64,7 +64,7 @@ def TurtleRunning(turtle):
             run = False
     end_time = time.time()
     finish_time = end_time - start_time
-    
+
 
 def main():
     Race()

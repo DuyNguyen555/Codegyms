@@ -28,6 +28,6 @@ def main():
     print(f"Winner: {ranking[first]} turtle")
     print("Finish time: %.3f sec" %(no1_turtle_jog.finish_time))
     t.exitonclick()
-
+    
 if __name__ == '__main__':
     main()
