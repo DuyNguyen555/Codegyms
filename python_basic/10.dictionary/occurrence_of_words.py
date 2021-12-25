@@ -21,6 +21,7 @@ def Condition(text):
     # đưa vào hàm dictionnary
     num_key = {}
     for i in text:
+        # từ này chưa đếm nên = 0
         key = {i:0}
         num_key.update(key)
     return num_key
