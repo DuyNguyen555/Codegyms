@@ -18,7 +18,7 @@ def DisplayEmployData(data):
             print(f"{key} : {GetEmployeeDepartment(value)}")
         else:
             print(f"{key} : {value}")
-            
+
 
 if __name__ == '__main__':
     # Thông tin nhân viên cho trước
