@@ -35,8 +35,9 @@ def DisplayOccurrence():
         if i in condition:
             condition[i] += 1
     for i in condition:
-        print(f"'{i}' xuất hiện: {condition[i]} lần")
-
+        if condition[i] >= 2:
+            print(f"'{i}' xuất hiện: {condition[i]} lần")
+    print("Các từ còn lại xuất hiện 1 lần")
 if __name__ == '__main__':
     # Văn bản cho trước
     text = str("""           Các công ty phụ thuộc vào nền tảng dữ liệu để cấu trúc, phát triển và cải tiến doanh
