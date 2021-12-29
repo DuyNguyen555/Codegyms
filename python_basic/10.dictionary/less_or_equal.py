@@ -13,7 +13,7 @@ if __name__ == '__main__':
                 'MUSIC PLAYER' : 600,
                 'TABLET' : 400 
             }
-    
+
     # Nhập
     price = int(input('Enter the price: '))
     PriceOfTheProduct(products, price)
