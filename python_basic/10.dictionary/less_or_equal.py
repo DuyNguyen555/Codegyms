@@ -11,7 +11,7 @@ if __name__ == '__main__':
                 'PLAYSTATION': 500,
                 'LAPTOP' : 1550,
                 'MUSIC PLAYER' : 600,
-                'TABLET' : 400 
+                'TABLET' : 400
             }
 
     # Nhập
