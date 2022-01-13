@@ -67,7 +67,7 @@ def TurtleRunning(turtle):
 
 
 def main():
-    Race()
+    # Race()
     AllTurtle()
     TurtleRunning(all_turtle)
     t.exitonclick()
