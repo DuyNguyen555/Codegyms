@@ -22,7 +22,7 @@ class circle:
 
 if __name__ == '__main__':
     c = circle(50)
-    c.draw()
     print("S =", c.area())
     print("C =", c.perimeter())
+    c.draw()
     
