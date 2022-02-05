@@ -56,9 +56,9 @@ class Continuous_clock():
         self.clock_makings(3, 6, 60, 190, 10)
     
     def clock_work(self, 
-        color_second, count_angle_second, height_second, time_clock_second,
+        color_second , count_angle_second , height_second , time_clock_second,
         color_minutes, count_angle_minutes, height_minutes, time_clock_minutes,
-        color_hours, count_angle_hours, height_hours, time_clock_hours):
+        color_hours  , count_angle_hours  , height_hours  , time_clock_hours):
         """Work"""
         global pen2
         pen2 = Turtle()
