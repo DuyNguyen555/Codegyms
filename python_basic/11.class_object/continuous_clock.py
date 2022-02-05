@@ -1,17 +1,19 @@
 from turtle import *
 import time
-# """Create the screen"""
-screen = Screen()
-screen.bgcolor("black")
-screen.title("Clock")
-screen.setup(width = 500, height = 500)
-screen.tracer(0)
 
 class Continuous_clock():
-    
     def __init__(self, pencolor):
         self.pencolor = pencolor
     
+    def screen(self, width_screen = 500, height_screen = 500, color = "black"):
+        """Create the screen"""
+        global screen
+        screen = Screen()
+        screen.bgcolor(color)
+        screen.title("Clock")
+        screen.setup(width = width_screen, height = height_screen)
+        screen.tracer(0)
+        
     def face_clock(self, radium = 200, size = 3):
         """Draw the face of the clock"""
         pen = Turtle()
@@ -53,21 +55,49 @@ class Continuous_clock():
         # clock makings for the minutes
         self.clock_makings(3, 6, 60, 190, 10)
     
-    def clock_work(self, color, count_angle, height, time_clock):
-        pen = Turtle()
-        pen.pensize(2)
-        pen.hideturtle()
-        angle = (time_clock / count_angle) * 360
-        pen.penup()
-        pen.goto(0,0)
-        pen.setheading(90)
-        pen.color(color)
-        pen.rt(angle)
-        pen.pendown()
-        pen.fd(height)
-    
+    def clock_work(self, 
+        color_second, count_angle_second, height_second, time_clock_second,
+        color_minutes, count_angle_minutes, height_minutes, time_clock_minutes,
+        color_hours, count_angle_hours, height_hours, time_clock_hours):
+        """Work"""
+        global pen2
+        pen2 = Turtle()
+        pen2.pensize(2)
+        pen2.hideturtle()
+        angle_second = (time_clock_second / count_angle_second) * 360
+        angle_minutes = (time_clock_minutes / count_angle_minutes) * 360
+        angle_hours = (time_clock_hours / count_angle_hours) * 360
+        pen2.penup()
+        # second
+        pen2.goto(0,0)
+        pen2.setheading(90)
+        pen2.color(color_second)
+        pen2.rt(angle_second)
+        pen2.pendown()
+        pen2.fd(height_second)
+        # minutes
+        pen2.goto(0,0)
+        pen2.setheading(90)
+        pen2.color(color_minutes)
+        pen2.rt(angle_minutes)
+        pen2.pendown()
+        pen2.fd(height_minutes)
+        # hours
+        pen2.goto(0,0)
+        pen2.setheading(90)
+        pen2.color(color_hours)
+        pen2.rt(angle_hours)
+        pen2.pendown()
+        pen2.fd(height_hours)
+        
+    def update_clock(self):
+        screen.update()
+        time.sleep(1)
+        pen2.clear()
+
 if __name__ == '__main__':
     clock = Continuous_clock("skyblue")
+    clock.screen()
     clock.paint_clock()
     while True:
         # second
@@ -76,7 +106,5 @@ if __name__ == '__main__':
         m = int(time.strftime("%M"))
         # hours
         h = int(time.strftime("%I"))
-        clock.clock_work("pink", 60, 150, s)
-        clock.clock_work("blue", 60, 100, m)
-        clock.clock_work("red", 12, 50, h)
-        screen.update()
+        clock.clock_work("pink", 60, 150, s, "blue", 60, 100, m, "red", 12, 50, h)
+        clock.update_clock()
