@@ -1,5 +1,5 @@
+import turtle
 def circle(radius):
-    import turtle
     pen = turtle.Turtle()
     pen.pensize(5)
     pen.circle(radius)
