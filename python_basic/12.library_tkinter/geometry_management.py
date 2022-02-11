@@ -1,16 +1,16 @@
 from tkinter import *
-# Create window 
-login_window = Tk()
-# create area window
-login_window.geometry("300x400")
+# create window
+window_login = Tk()
 # create title
-login_window.title("login")
-# login
-username = Label(login_window, text = "Username:").place(x = 30, y = 30)
-email = Label(login_window, text = "Email:").place(x = 30, y = 60)
-password = Label(login_window, text = "Password:").place(x = 30, y = 90)
-entry1 = Entry(login_window).place(x = 100, y = 30, width = 150)
-entry2 = Entry(login_window).place(x = 100, y = 60, width = 150)
-entry3 = Entry(login_window).place(x = 100, y = 90, width = 150)
-# Display
-login_window.mailoop()
+window_login.title("Login")
+window_login.geometry("300x150")
+# Option
+username = Label(window_login, text = "Username:").place(x = 10, y = 20)
+email = Label(window_login, text = "Email:").place(x = 10, y = 50)
+password = Label(window_login, text = "Password:").place(x = 10, y = 80)
+# Enter
+label_username = Entry(window_login).place(x = 100, y = 20, width = 150)
+label_username = Entry(window_login).place(x = 100, y = 50, width = 150)
+label_password = Entry(window_login).place(x = 100, y = 80, width = 150)
+# window
+window_login.mainloop()
