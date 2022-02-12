@@ -37,9 +37,9 @@ if __name__ == '__main__':
     label_result_c = Label(screen, text="\N{DEGREE CELSIUS}")
     
     # Display result
-    frame_f.grid(row=0, column=0, padx=10)
-    button_f.grid(row=0, column=1, pady=10)
-    label_result_c.grid(row=0, column=2, padx=10)
+    frame_f.grid(row=0, column=0, padx=20)
+    button_f.grid(row=0, column=1, pady=20)
+    label_result_c.grid(row=0, column=2, padx=20)
     """F to C(END)"""
 
     """C to F(START)"""
@@ -66,9 +66,9 @@ if __name__ == '__main__':
     label_result_f = Label(screen, text="\N{DEGREE FAHRENHEIT}")
     
     # Display result
-    frame_c.grid(row=1, column=0, padx=10)
-    button_c.grid(row=1, column=1, padx=10)
-    label_result_f.grid(row=1, column=2, padx=10)
+    frame_c.grid(row=1, column=0, padx=20)
+    button_c.grid(row=1, column=1, padx=20)
+    label_result_f.grid(row=1, column=2, padx=20)
     
     # mainloop
     screen.mainloop()
