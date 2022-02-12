@@ -1,5 +1,4 @@
 from tkinter import *
-from tkinter.ttk import *
 
 # Tạo cửa sổ chính cho giao diện
 root = Tk()
