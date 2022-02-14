@@ -62,7 +62,7 @@ if __name__ == "__main__":
     Button(window, text="Add"   , font="arial 12 bold", command=add   ).place(x=100, y=270)
     Button(window, text="View"  , font="arial 12 bold", command=view  ).place(x=100, y=310)
     Button(window, text="Delete", font="arial 12 bold", command=delete).place(x=100, y=350)
-    Button(window, text="Reset"   , font="arial 12 bold", command=reset ).place(x=100, y=390)
+    Button(window, text="Reset" , font="arial 12 bold", command=reset ).place(x=100, y=390)
     
     scroll_bar = Scrollbar(window, orient=VERTICAL)
     select = Listbox(window, yscrollcommand=scroll_bar.set, height=10, width = 30)
