@@ -25,6 +25,7 @@ def delete():
     update()
 
 def reset():
+    """Reset text"""
     name.set('')
     number.set('')
     address.delete(1.0, "end")
