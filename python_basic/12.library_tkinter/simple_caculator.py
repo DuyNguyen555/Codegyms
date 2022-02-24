@@ -4,7 +4,7 @@ def press(text):
     global equation
     equation = equation + str(text)
     var_input.set(equation)
-    
+
 def clear():
     global equation
     equation = ""
@@ -32,7 +32,7 @@ if __name__ == '__main__':
     expression = Entry(display, textvariable = var_input, width=25, 
                        font = 'arial 20 bold', justify = "right", 
                        insertwidth=2, bd=10).grid(columnspan = 4, pady =10)
-    
+
     # Create button
     # number
     button_9 = Button(display, text="9", font = 'arial 15 bold', bd=5, width=5, command = lambda: press(9) ).grid(row=1, column=2)
