@@ -53,7 +53,7 @@ def createbot():
     # Chọn giới tính của bot
     dbot.setProperty('voice', voice[1].id)
 
-def speak(audio):
+def speak_chatting(audio):
     """Hàm để con bot nói"""
     chat.config(state=NORMAL)
     chat.insert(END, "Bot: " + audio + '\n\n')
@@ -98,7 +98,7 @@ def run(request):
 
     elif "how do you do" in request: feel()
 
-    elif "diana" in request: speak("Need anything?")
+    elif "diana" in request: speak_chatting("Need anything?")
 
     elif "thank" in request: thank()
         
@@ -114,83 +114,83 @@ def run(request):
     
     elif "bye" in request: goodbye()
     
-    elif "" in request: speak("Sorry, I don't know")
+    elif "" in request: speak_chatting("Sorry, I don't know")
 
 
 def greeting():
     """Hàm này để con bot chào bạn"""
     greet = choice(["Hi", "Hi there", "Hello", "Hey"])
     response = "How can I help you?"
-    speak(greet)
-    speak(response)
+    speak_chatting(greet)
+    speak_chatting(response)
     
 def goodbye():
     """Hàm này để con bot chào tạm biệt và tắt"""
-    bye = choice(["See you", "c-ya", "Take care, have a good time",
-                    "See you later", "Catch you later", "See you soon", "See you next time"])
-    speak(bye)
+    bye = choice(["Take care, have a good time", "See you later", 
+                  "Catch you later", "See you soon", "See you next time"])
+    speak_chatting(bye)
     quit()
     
 def thank():
     """Khi bạn cám ơn bot, nó sẽ trả lời"""
     responding = choice(["You are welcome", "No problem"])
-    speak(responding)
+    speak_chatting(responding)
     
 def namebot():
     """Hàm này để giới thiệu tên"""
-    speak("My name is Diana")
+    speak_chatting("My name is Diana")
     
 def time():
     """Thời gian hiện tại"""
-    speak(accept_requests)
+    speak_chatting(accept_requests)
     time_today = datetime.datetime.now().strftime("%I:%M %p")
-    speak(time_today)
+    speak_chatting(time_today)
 
 def today():
     """Ngày hiện tại"""
-    speak(accept_requests)
+    speak_chatting(accept_requests)
     time_today = datetime.datetime.now().strftime("%B, %d, %Y")
-    speak(time_today)
+    speak_chatting(time_today)
     
 def you_live():
-    speak("In a little space, I'm not sure")
+    speak_chatting("In a little space, I'm not sure")
 
 def feel():
-    speak("I'm doing well, thank you")
+    speak_chatting("I'm doing well, thank you")
     
 def search_google():
     """Hàm này để tìm kiếm trong google"""
-    speak("What should I search for you ?")
+    speak_chatting("What should I search for you ?")
     search = command().lower()
-    speak(accept_requests)
+    speak_chatting(accept_requests)
     url = f"https://www.google.com/search?q={search}"
     web.get().open(url)
     
 def open_google():
     """Hàm này để mở trong google"""
-    speak(accept_requests)
+    speak_chatting(accept_requests)
     url = f"https://www.google.com"
     web.get().open(url)
-    speak("Open Google Chrome")
+    speak_chatting("Open Google Chrome")
     
 def search_youtube():
     """Hàm này để tìm kiếm trên youtube"""
-    speak("What should I search for you ?")
+    speak_chatting("What should I search for you ?")
     search = command().lower()
-    speak(accept_requests)
+    speak_chatting(accept_requests)
     url = f"https://www.youtube.com/search?q={search}"
     web.get().open(url)
 
 def open_youtube():
     """Hàm này để mở trong google"""
-    speak(accept_requests)
+    speak_chatting(accept_requests)
     url = f"https://www.youtube.com"
     web.get().open(url)
     
 
 def open_zalo():
     """Hàm này để mở Zalo chat"""
-    speak(accept_requests)
+    speak_chatting(accept_requests)
     zalo = r"C:\Users\Admin\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Zalo"
     os.startfile(zalo)
 
