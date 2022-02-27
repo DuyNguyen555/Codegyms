@@ -196,7 +196,7 @@ def open_zalo():
 
 
 if __name__ == '__main__':
-        
+
     display = Tk()
     display.geometry("600x700")
     display.title("Chat Bot")
