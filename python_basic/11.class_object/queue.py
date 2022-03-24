@@ -1,3 +1,4 @@
+
 class Queue():
     def __init__(self, limit = 10):
         self.que = []
@@ -9,13 +10,13 @@ class Queue():
     def enQueue(self,item):
         if self.size >= self.limit:
             print('Hang doi đầy')
-            return 
+            return
         else:
             self.que.append(item)
         
-        if self.front is None: 
+        if self.front is None:
             self.front = self.rear = 0
-        else: 
+        else:
             self.rear = self.size
         self.size += 1
         print('Hang doi sau khi them vao la')
