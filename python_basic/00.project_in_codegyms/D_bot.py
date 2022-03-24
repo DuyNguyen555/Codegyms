@@ -114,6 +114,8 @@ def run(request):
     
     elif "bye" in request: goodbye()
     
+    elif "friend" in request: friend()
+    
     elif "" in request: speak_chatting("Sorry, I don't know")
 
 
@@ -186,17 +188,29 @@ def open_youtube():
     speak_chatting(accept_requests)
     url = f"https://www.youtube.com"
     web.get().open(url)
-    
 
 def open_zalo():
     """Hàm này để mở Zalo chat"""
     speak_chatting(accept_requests)
     zalo = r"C:\Users\Admin\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Zalo"
     os.startfile(zalo)
+    
+def friend():
+    """Hàm này để trả lời câu hỏi"""
+    speak_chatting("No, I was created not long ago, I haven't met anyone")
+    
+def open_facebook():
+    """Hàm này để mở facebook"""
+    speak_chatting(accept_requests)
+    url = f"https://www.facebook.com"
+    web.get().open(url)
 
+def open_picture():
+    speak_chatting(accept_requests)
+    url = r"C:\Users\Admin\OneDrive\Pictures\Screenshots\kien_truc.jpg"
+    os.startfile(url)
 
 if __name__ == '__main__':
-
     display = Tk()
     display.geometry("600x700")
     display.title("Chat Bot")
@@ -205,20 +219,20 @@ if __name__ == '__main__':
 
     # Tạo thanh trượt
     scroll_bar = Scrollbar(display, cursor="circle", orient=VERTICAL)
-    
+
     # Tạo khung trò chuyện
     chat = Text(display, font="Arial 20 bold", width=37, height=18, insertwidth=3, 
                 bd=10, cursor="circle", yscrollcommand=scroll_bar.set, bg="skyblue")
-    
+
     # Tạo nút để gữi tin nhắn
     send_button = Button(display, text="SEND", font="Arial 10 bold",width=5, height=2, bd=10, bg="aqua", command=send, cursor="circle")
 
     # Tạo khung để nhập
     entry_chat = Text(display, font="Arial 15 bold",width=38, height=2, bd=10, insertwidth=3,cursor="heart", bg="#6666FF")
-    
+
     # Tạo nút micro
     micro_button = Button(display, text="MICRO", font="Arial 10 bold",width=5, height=2, bd=10, bg="#CCFFFF", command=micro, cursor="circle")
-    
+
     chat.place(x=4, y=4)
     scroll_bar.config(command=chat.yview)
     scroll_bar.pack(side=RIGHT, fill=Y)
