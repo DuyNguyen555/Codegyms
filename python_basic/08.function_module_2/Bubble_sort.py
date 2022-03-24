@@ -18,9 +18,8 @@ def bubble_sort(lis):
         for j in range(1, len(lis)):
             i = j - 1
             if lis[i] > lis[j]:
-                lis[i], lis[j] = lis [j], lis[i] 
-        print(lis)
-        print()
+                lis[i], lis[j] = lis [j], lis[i]
+    return(lis)
 
 if __name__ == '__main__':
     list_game = [63, 50, 30, 75, 29, 46, 60]
