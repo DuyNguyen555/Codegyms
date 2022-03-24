@@ -12,7 +12,7 @@ class linked_list:
     def __init__(self):
         self.headval = None
 
-    def listprint(self): 
+    def listprint(self):
         printval = self.headval
         #Duyệt từ đầu đến cuối danh sách liên kết 
         while printval is not None:
