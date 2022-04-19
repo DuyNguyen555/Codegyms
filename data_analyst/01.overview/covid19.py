@@ -33,5 +33,5 @@ if __name__ == '__main__':
     data = data.sort_values('deaths',ascending = False)
     print(data.head(5))
     
-    # print("tổng số ca nhiễm và số ca ncủa các châu lục")
-    # cleaned_data.groupby('continent')['cases','deaths'].sum()
+    print("tổng số ca nhiễm và số ca của các châu lục")
+    print(cleaned_data.groupby(['continent'])['cases', 'deaths'].sum())
