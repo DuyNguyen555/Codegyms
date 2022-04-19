@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 if __name__ == '__main__':
-    data = pd.read_csv('01.overview/subset-covid-data.csv', encoding = 'utf-8')
+    data = pd.read_csv('01.overview/data/subset-covid-data.csv', encoding = 'utf-8')
 
     # print(data.head())
 
