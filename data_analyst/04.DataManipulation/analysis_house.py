@@ -2,7 +2,9 @@ import pandas as pd
 
 if __name__ == '__main__':
     df = pd.read_excel('04.DataManipulation\data\house_price_dống-da.xlsx')
-    # print(df.head())
+    print("Số dòng là:", df.shape[0], "\nSố cột là: ", df.shape[0])
+    print("Các thuộc tính trong bảng: ")
+    print(df.dtypes)
     
     df_p = df[(df['ward_name'] == 'Phường Khâm Thiên') | (df['ward_name'] == 'Phường Trung Liệt')]
     df_p = df_p[(df['land_certificate'] == "Sổ đỏ") & (df["bedroom"] >= 3)]
