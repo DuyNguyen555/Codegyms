@@ -14,4 +14,5 @@ if __name__ == '__main__':
     df['Hour'] = pd.to_datetime(df['response_time'],   format=' %H:%M:%S').dt.hour
     df['Minute'] = pd.to_datetime(df['response_time'], format=' %H:%M:%S').dt.minute
     df['Second'] = pd.to_datetime(df['response_time'], format=' %H:%M:%S').dt.second
+
     print(df.head(20))
