@@ -11,8 +11,8 @@ if __name__ == '__main__':
     df['new'] = df['join_year'] == 2021
     df['rate'] = np.where(df['rating_good'] >= 50000, 'good', 'bad')
     conditions = [(df['rating_good'] >= 30000) & (df['rating_bad'] <= 100),
-                    (df['rating_good'] >= 10000) & (df['rating_good'] < 30000) & (df['rating_bad'] <= 1000) & (df['rating_bad'] > 100),
-                    (df['rating_good'] < 10000)]
+                  (df['rating_good'] >= 10000) & (df['rating_good'] < 30000) & (df['rating_bad']  > 100) & (df['rating_bad']<= 1000),
+                  (df['rating_good'] < 10000)]
     
     choice = ['blue', 'yellow', 'red']
     df['flag'] = np.select(conditions, choice, default='black')
