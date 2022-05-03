@@ -19,11 +19,11 @@ if __name__ == '__main__':
     # Vẽ biểu đồ phân bố số lượng ca mắc mới ở các quốc gia
     print ("trung bình số ca mắc mới: " + str(cleaned_data.cases.mean()))
     print ("trung vị của số ca mắc mới: "+ str(cleaned_data.cases.median()))
-    # plt.hist(cleaned_data.cases, bins = 200)
-    # plt.title("Phân bố số ca mắc mới")
-    # plt.xlabel("số ca mắc mới")
-    # plt.ylabel("Số lượng quốc gia")
-    # plt.show()
+    plt.hist(cleaned_data.cases, bins = 200)
+    plt.title("Phân bố số ca mắc mới")
+    plt.xlabel("số ca mắc mới")
+    plt.ylabel("Số lượng quốc gia")
+    plt.show()
     
     print ("5 quốc gia có số ca nhiễm mới cao nhất")
     data = data.sort_values('cases',ascending = False)
