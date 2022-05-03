@@ -19,7 +19,6 @@ if __name__ == '__main__':
     bimodal = np.concatenate([first_half, second_half])
     df['bimodal'] = bimodal
     # sns.kdeplot(data=df)
-    # df.describe()
 
     normal_big = np.random.normal(1000000, 10000, (1000,1))  # normal distribution of large values
     df['normal_big'] = normal_big
