@@ -14,7 +14,14 @@ if __name__ == '__main__':
     
     df_sum = df.loc[:, ['Continent', 'GDP (millions of US$)']]
     
-    # df_2 = df.groupby(["Country"])['GDP (millions of US$)'].sum()
+    df_2 = df.groupby(["Continent"])['GDP (millions of US$)'].agg(["sum", "mean"])
+
+    df_2["A"] = df_2["sum"] / df_2.shape[0]
+    df_2["B"] = df_2["mean"] / df_2.shape[0]
+    
+    print(df_2.head())
+    df_2.to_csv('03.PandasNo2\data\hext.csv')
+    # print(tb_s, tb_m)
     # df_3 = df.groupby(["Country"])['GDP (millions of US$)'].mean()
-    # print(df_2)
-    # df_3 = df.merge(df_2, df_3, on='Country')
+    
+    
