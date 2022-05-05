@@ -26,7 +26,6 @@ if __name__ == '__main__':
         values.update(value)
     
     df = df.fillna(value=values)
-    
     df = df[(df['type_of_land'] == "Bán nhà riêng")]
     
     # Tính 1 m thì bao nhiêu tiền
