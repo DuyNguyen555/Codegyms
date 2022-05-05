@@ -10,7 +10,7 @@ if __name__ == '__main__':
     # print(df.describe())
     
     # Xóa dữ liệu khuyết thiếu khi thuộc tính price không có giá trị
-    df.dropna(subset=['price'],inplace=True)
+    df.dropna(subset=['price'], inplace=True)
     
     lis_row = ['house_direction', 'balcony_direction', 'toilet', 'bedroom', 'floor']
     lis_mode = []
