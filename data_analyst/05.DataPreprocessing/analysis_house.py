@@ -28,7 +28,7 @@ if __name__ == '__main__':
     df = df.fillna(value=values)
     df = df[(df['type_of_land'] == "Bán nhà riêng")]
     
-    # Tính 1 m thì bao nhiêu tiền
+    # Tính 1 m^2 thì bao nhiêu tiền
     df['price/m2'] = df['price'] / df['area']
 
     Q1 = df['price/m2'].quantile(0.25)
