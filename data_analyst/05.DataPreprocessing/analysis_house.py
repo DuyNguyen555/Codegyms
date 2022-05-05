@@ -30,37 +30,36 @@ if __name__ == '__main__':
     df = df[(df['type_of_land'] == "Bán nhà riêng")]
     
     # Tính 1 m thì bao nhiêu tiền
-    df['price1m'] = df['price'] / df['area']
+    df['price/m2'] = df['price'] / df['area']
 
-    Q1 = df.quantile(0.25)
-    Q3 = df.quantile(0.75)
+    Q1 = df['price/m2'].quantile(0.25)
+    Q3 = df['price/m2'].quantile(0.75)
     IQR = Q3 - Q1
-
-    df2 = df[~((df < Q1-1.5*IQR) | (df > Q3+1.5*IQR)).any(axis=1)]
+    df2 = df[~((df["price/m2"] < Q1-1.5*IQR) | (df["price/m2"] > Q3+1.5*IQR))]
     
-    # # Chuẩn hóa dữ liệu
-    # # min-max scaling
-    # scaler = MinMaxScaler()
-    # mms = scaler.fit_transform(pd.DataFrame(df['price1m']))
-    # mms_new = scaler.fit_transform(pd.DataFrame(df2['price1m']))
-    # sns.kdeplot(data=mms)
+    # Chuẩn hóa dữ liệu
+    # min-max scaling
+    scaler = MinMaxScaler()
+    mms = scaler.fit_transform(pd.DataFrame(df2['price/m2']))
     
-    # # Robust scaling
-    # scaler = RobustScaler()
-    # rbs = scaler.fit_transform(pd.DataFrame(df['price1m']))
-    # rbs_new = scaler.fit_transform(pd.DataFrame(df2['price1m']))
+    # Robust scaling
+    scaler = RobustScaler()
+    rbs = scaler.fit_transform(pd.DataFrame(df2['price/m2']))
     
-    # # Z-score scaling
-    # scaler = StandardScaler()
-    # zss = scaler.fit_transform(pd.DataFrame(df['price1m']))
-    # zss_new = scaler.fit_transform(pd.DataFrame(df2['price1m']))
+    # Z-score scaling
+    scaler = StandardScaler()
+    zss = scaler.fit_transform(pd.DataFrame(df2['price/m2']))
     
+    # Dữ liệu gốc
+    sns.kdeplot(data=df['price/m2'])
+    plt.show()
     
-    # sns.kdeplot(data=mms_new)
-    # plt.show()
+    # Dữ liệu đã thay đổi
+    sns.kdeplot(data=mms)
+    plt.show()
     
-    # sns.kdeplot(data=zss_new)
-    # plt.show()
+    sns.kdeplot(data=rbs)
+    plt.show()
     
-    # sns.kdeplot(data=zss_new)
-    # plt.show()
+    sns.kdeplot(data=zss)
+    plt.show()
