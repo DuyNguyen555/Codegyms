@@ -9,23 +9,27 @@ if __name__ == '__main__':
     # df.info()
     # print(df.describe())
     # print(df.isna())
+    
     # Không hẵn là cần xóa tất cả các dòng không có giá trị vì những dòng ấy có thể không liên quan đến các phép tính như là thông tin của sản phẩm đó
-    # df.boxplot()
-    # plt.show()
+    
+    # Dữ liệu ban đầu
+    df.boxplot()
+    plt.show()
     
     # Thay thế giá trị NaN của thuộc tính Description bằng Not Know
     df['Description'].fillna("Not Know")
     
-    df2 = df[(df['Quantity'] >= 0) & (df['UnitPrice'] != 0)]
+    df2 = df[(df['Quantity'] >= 0) & (df['UnitPrice'] != 0)] # Phần này vẫn chưa hiểu đề bài lắm nên không chắc 
     
-    # sns.boxplot(data=df['Quantity'])
-    # plt.show()
-    # sns.boxplot(data=df2['Quantity'])
-    # plt.show()
+    # Tạo bảng
+    sns.boxplot(data=df['Quantity'])
+    plt.show()
+    sns.boxplot(data=df2['Quantity'])
+    plt.show()
 
-    # sns.boxplot(data=df['UnitPrice'])
-    # plt.show()
-    # sns.boxplot(data=df2['UnitPrice'])
-    # plt.show()
+    sns.boxplot(data=df['UnitPrice'])
+    plt.show()
+    sns.boxplot(data=df2['UnitPrice'])
+    plt.show()
     
     print(df2.describe())
