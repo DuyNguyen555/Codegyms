@@ -19,7 +19,7 @@ if __name__ == '__main__':
     # Thay thế giá trị NaN của thuộc tính Description bằng Not Know
     df['Description'].fillna("Not Know")
     
-    df2 = df[(df['Quantity'] >= 0) & (df['UnitPrice'] != 0)] # Phần này vẫn chưa hiểu đề bài lắm nên không chắc 
+    df2 = df[(df['Quantity'] >= 0) & (df['UnitPrice'] != 0)]
     
     # Tạo bảng
     sns.boxplot(data=df['Quantity'])
