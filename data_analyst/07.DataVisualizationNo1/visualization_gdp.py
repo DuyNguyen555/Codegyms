@@ -27,8 +27,8 @@ if __name__=='__main__':
     plt.ylabel("GDP(millions of US$)", fontsize=15, fontweight=800, color='m')
     plt.title("GDP of South America", fontsize=20, fontweight=1000, color='r')
     plt.show()
-    """Cho thấy mức trung bình GDP của Brazil cao nhất so với mức trung bình GDP của các nước còn lại
-    .Paraguay có GDP thấp nhất, kế tiếp lần lượt là Uruguay, Ecuador.
+    """Cho thấy mức trung bình GDP của Brazil cao nhất so với mức trung bình GDP của các nước còn lại.
+    Paraguay có GDP thấp nhất, kế tiếp lần lượt là Uruguay, Ecuador.
     Các nước còn lại đều có mức GDP tương đối nhau"""
     
     # GDP of Southeast Asia
