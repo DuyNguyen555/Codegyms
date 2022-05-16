@@ -55,7 +55,7 @@ if __name__ == '__main__':
     plt.bar_label(rect, padding=3)
     plt.xlabel("Type of land", fontsize=15, color='y', fontweight=800)
     plt.ylabel("1/(m^2)", fontsize=15, color='violet', fontweight=800)
-    plt.title("average house price per square meter", fontsize=20, fontweight=1000, color='r')
+    plt.title("Average house price per square meter", fontsize=20, fontweight=1000, color='r')
     plt.show()
     
     # Vẽ biểu đồ thể hiện tỉ lệ % bài đăng (bản ghi) giữa các hình thức nhà (type_of_land).
@@ -67,5 +67,5 @@ if __name__ == '__main__':
     plt.bar_label(rect2, padding=3)
     plt.xlabel('Number of bedroom', fontsize=15, color='violet', fontweight=800)
     plt.ylabel('Price of mean in 1/m^2', fontsize=15, color='m', fontweight=800)
-    plt.title('Price house', fontsize=20, fontweight=1000, color='r')
+    plt.title('Average bedroom price per square meter', fontsize=20, fontweight=1000, color='r')
     plt.show()
