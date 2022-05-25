@@ -45,13 +45,13 @@ if __name__ == '__main__':
     # Vẽ biểu đồ xu hướng
     rice_df = df[df["ProductId"] == 52]
     trans_df = df[(df["ProductName"] == "Transport (public) - Retail") | (df["ProductName"] == "Rice - Retail")]
-    # LmPlot(rice_df, trans_df)
+    LmPlot(rice_df, trans_df)
     
     # Vẽ biểu đồ phân bố
-    # ViolinPlot(df)
+    ViolinPlot(df)
     
     # Vẽ biểu đồ tần số
-    # CountPlot(df)
+    CountPlot(df)
     
     # Vẽ biểu đồ box plot
     BoxPlot(df)
