@@ -69,4 +69,6 @@ def vd3():
     plt.show()
 
 if __name__ == '__main__':
+    # vd1()
+    # vd2()
     vd3()
