@@ -58,5 +58,5 @@ def vd2():
     plt.show()
 
 if __name__ == '__main__':
-    # vd1()
+    vd1()
     vd2()
