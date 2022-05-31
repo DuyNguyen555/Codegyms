@@ -17,20 +17,20 @@ if __name__ == '__main__':
     print(df3)
     
     # Vẽ biểu đồ so sánh số lượng shop gia nhập theo các năm.
-    # rect = plt.bar(ls_year, ls_items, width=0.5, color='c', ec='k', linewidth=3)
-    # plt.bar_label(rect, padding=3)
-    # plt.xlabel('Year', fontsize=15, color='b', fontweight=800)
-    # plt.ylabel('Items', fontsize=15, color='m', fontweight=800)
-    # plt.title('Number of item in year', fontsize=18, color='r', fontweight=1000)
-    # plt.show()
+    rect = plt.bar(ls_year, ls_items, width=0.5, color='c', ec='k', linewidth=3)
+    plt.bar_label(rect, padding=3)
+    plt.xlabel('Year', fontsize=15, color='b', fontweight=800)
+    plt.ylabel('Items', fontsize=15, color='m', fontweight=800)
+    plt.title('Number of item in year', fontsize=18, color='r', fontweight=1000)
+    plt.show()
     
     # Vẽ biểu đồ thể hiện mối quan hệ giữa tỉ lệ phản hồi với số lượt khách hàng đánh giá tốt.
-    # plt.scatter(df2['response_rate'], df2['rating_good'])
-    # plt.show()
+    plt.scatter(df2['response_rate'], df2['rating_good'])
+    plt.show()
     
     # Vẽ biểu đồ thể hiện mối quan hệ giữa thời gian phản hồi (đơn vị giây) với số lượt khách hàng đánh giá xấu.
     
     
     # Vẽ biểu đồ thể hiện phân bố của điểm đánh giá trung bình.
-    # plt.hist(df['rating_normal'], bins=12)
-    # plt.show()
+    plt.hist(df['rating_normal'], bins=12)
+    plt.show()
