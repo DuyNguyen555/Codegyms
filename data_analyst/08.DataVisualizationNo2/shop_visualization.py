@@ -95,7 +95,6 @@ def request3(data):
     
     plt.show()
 
-
 if __name__ == '__main__':
     df = pd.read_csv('08.DataVisualizationNo2\data\shopeep_koreantop_clothing_shop_data.csv')
     
@@ -104,8 +103,8 @@ if __name__ == '__main__':
     data1 = df[['name', 'join_year', 'join_month']]
     data2 = df[['response_time', 'response_rate', 'rating_good']]
     data3 = df[['rating_bad', 'rating_good', 'rating_normal']]
-    # print(data2.info())
+
     # Visualization
-    # request1(data1)
-    # request2(data2)
+    request1(data1)
+    request2(data2)
     request3(data3)
