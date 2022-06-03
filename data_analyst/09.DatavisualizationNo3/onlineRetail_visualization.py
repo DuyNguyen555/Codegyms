@@ -33,7 +33,6 @@ if __name__ == '__main__':
     df.dropna(inplace=True)
     df['Price'] = df['Quantity'] * df['UnitPrice']
 
-    
     # Visualization
     ditribution_chart(df)
     histogram(df)
