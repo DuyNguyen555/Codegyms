@@ -50,7 +50,7 @@ def ex3(tips):
 
 if __name__ == '__main__':
     tips = sns.load_dataset("tips")
-    # ex1(tips)
-    # ex2(tips)
+    ex1(tips)
+    ex2(tips)
     ex3(tips)
     
