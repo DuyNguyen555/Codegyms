@@ -7,7 +7,7 @@ def IQR(data, x):
     Q3 = data[x].quantile(0.75)
     IQR = Q3 - Q1
     
-    data = data[~((data[x]<(Q1-IQR*1.5)) | ((Q3+IQR*1.5)>data[x]))]
+    data = data[~((data[x]<(Q1-IQR*1.5)) | (data[x]>(Q3+IQR*1.5)))]
     return data
     
 def request1(data):
@@ -72,7 +72,7 @@ if __name__ == '__main__':
     data = IQR(data, 'price')
     
     # Visualization
-    # request1(data)
-    # request2(data)
+    request1(data)
+    request2(data)
     request3(data)
     
