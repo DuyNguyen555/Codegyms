@@ -30,6 +30,6 @@ def PairPlot(tips):
     
 if __name__ == '__main__':
     tips = sns.load_dataset("tips")
-    # HeatMap()
-    # BoxPlot(tips)
+    HeatMap()
+    BoxPlot(tips)
     PairPlot(tips)
