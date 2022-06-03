@@ -18,7 +18,7 @@ if __name__ == '__main__':
     plt.show()
     
     df_rice['time_processed'] = df_rice.Month + (df_rice.Year - 2013)*12
-    plt.plot(df_rice['time_processed'], df_rice['Price'], 'c-*',lw=2,ms=12, mfc='r', mec='k')
+    plt.plot(df_rice['time_processed'], df_rice['Price'], 'c-*', lw=2, ms=12, mfc='r', mec='k')
     plt.show()
     
     print("Hệ số tương quan và pvalue tương ứng là:\n", stats.pearsonr(df_rice.time_processed, df_rice.Price))
