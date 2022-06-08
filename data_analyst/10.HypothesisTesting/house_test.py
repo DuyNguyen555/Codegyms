@@ -42,6 +42,6 @@ if __name__ == '__main__':
     
     # H0: n2 - n1 == 0
     # H1: n2 - n1 < 0
-    print(stats.ttest_ind(df21['million/m^2'], df22['million/m^2'], equal_var=False))
-    # s<0, p>0.05 --> Chấp nhận H0, bác bỏ H1
+    print(stats.ttest_ind(df22['million/m^2'], df21['million/m^2'], equal_var=False))
+    # s>0, p>0.05 --> Chấp nhận H0, bác bỏ H1
     # Kết luận: Không có căn cứ chứng minh giá của những căn nhà không có thông tin về giấy tờ pháp lý thấp hơn giá nhà những căn có thông tin về giấy tờ pháp lý.
