@@ -8,7 +8,6 @@ def ex1():
     tscore, pvalue = ttest_1samp(x, popmean=20, alternative='less')
     print(tscore, pvalue)
 
-
     tscore, pvalue = ttest_1samp(x, popmean=20, alternative='greater')
     print(tscore, pvalue)
     
