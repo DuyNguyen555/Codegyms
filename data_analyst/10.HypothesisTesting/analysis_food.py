@@ -26,18 +26,24 @@ if __name__ == '__main__':
     del (df_rice, df_wheat, price)
     
     # 3. Vẽ biểu đồ sự biến đổi giá gạo trung bình từ năm 1/2014 đến năm 1/2019 và tìm mối liên hệ giữa giá Trà và giá Cà phê
+    # Biến đổi thành datetime
     df['time'] = pd.to_datetime(df['Year'].astype(str) + "/" + df['Month'].astype(str))
+    
+    # Trực quan hóa dữ liệu
     df_tea = df.loc[(df.ProductName == 'Tea - Retail')]
     df_coffee = df.loc[(df.ProductName == 'Coffee - Retail')]
     
     gr_tea = df_tea.groupby('time')['Price'].mean()
     gr_coffee = df_coffee.groupby('time')['Price'].mean()
     
-    plt.plot_date(gr_tea.index, gr_tea.values, 'c-o')
-    plt.plot_date(gr_coffee.index, gr_coffee.values, 'm-o')
-    
+    plt.plot_date(gr_tea.index, gr_tea.values, 'c-o', label='Tea')
+    plt.plot_date(gr_coffee.index, gr_coffee.values, 'm-o', label='Coffee')
+    plt.xlabel("Date", fontsize=14)
+    plt.ylabel("Price", fontsize=14)
+    plt.legend()
     plt.show()
     
+    # Kiểm định giá trị trung bình độc lập
     df_tea_and_coffee = df.loc[(df.ProductName.isin(['Tea - Retail', 'Coffee - Retail']))]
     df_tea_and_coffee['time-place'] = df_tea_and_coffee['time'].astype(str) + '-' + df_tea_and_coffee['Place'].astype(str)
 
