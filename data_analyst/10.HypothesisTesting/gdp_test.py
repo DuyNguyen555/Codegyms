@@ -22,7 +22,7 @@ if __name__ == '__main__':
     # H1: europe - asian > 0
     df_asian = df[(df['Continent'] == 'Asia')]
     df_europe = df[(df['Continent'] == 'Europe')]
-    print(stats.ttest_ind(df_europe['GDP (millions of US$)'], df_asian['GDP (millions of US$)'], equal_var=False))
+    print(stats.ttest_ind(df_europe['GDP (millions of US$)'], df_asian['GDP (millions of US$)'], equal_var=False, alternative="greater"))
     # statistic<0, pvalue>0.05 --> Chấp nhận H0 và bác bỏ H1.
     # ==> Kết luận: Không đủ căn cứ để chứng minh GDP trung bình ở các quốc gia ở châu Âu cao hơn châu Á
     
@@ -30,7 +30,7 @@ if __name__ == '__main__':
     df_americas = df.loc[(df.Continent.isin(['South America', 'North America']))]
     # H0: americas - europe == 0
     # H1: americas - europe != 0
-    print(stats.ttest_ind(df_americas['GDP (millions of US$)'], df_europe['GDP (millions of US$)'], equal_var=False))
-    # statistic>0, pvalue>0.05 --> Chấp nhận H0 và bác bỏ H1.
+    print(stats.ttest_ind(df_americas['GDP (millions of US$)'], df_europe['GDP (millions of US$)'], equal_var=False, alternative='two-sided'))
+    # pvalue>0.05 --> Chấp nhận H0 và bác bỏ H1.
     # ==> Kết luận: GDP trung bình của các quốc gia ở châu Âu và châu Mỹ là bằng nhau
     
