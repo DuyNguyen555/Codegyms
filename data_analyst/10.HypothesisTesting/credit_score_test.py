@@ -22,6 +22,21 @@ if __name__ == '__main__':
 
     # H0: n1 - n2 = 0
     # H1: n1 - n2 < 0
-    print(stats.ttest_ind(df11['MonthlyIncome'], df12['MonthlyIncome'], equal_var=False))
+    # print(stats.ttest_ind(df11['MonthlyIncome'], df12['MonthlyIncome'], equal_var=False))
     # s<0, p<10% --> Bác bỏ H0, chấp nhận H1
     # Kết luận ==> Những khách hàng không có người phụ thuộc sẽ có thu nhập trung bình theo tháng (MonthlyIncome) nhỏ hơn những khách hàng có người phụ thuộc
+    
+    # Có phải trung bình số lượng khoản vay (NumberOfOpenCreditLinesAndLoans) những khách hàng gặp khó khăn trong vòng 2 năm trở lại đây (SeriousDlqin2yrs =1) thì sẽ cao hơn những khách hàng không gặp khó khăn không với mức ý nghĩa 10%
+    df2 = df[['NumberOfOpenCreditLinesAndLoans', 'SeriousDlqin2yrs']]
+    
+    # Những khách hàng gặp khó khăn trong vòng 2 năm trở lại đây
+    df21 = df2[(df2['SeriousDlqin2yrs'] == 1)]
+    
+    # Những khách hàng không gặp khó khăn
+    df22 = df2[(df2['SeriousDlqin2yrs'] == 0)]
+
+    # H0: n1 - n2 = 0
+    # H1: n1 - n2 > 0
+    # print(stats.ttest_ind(df21['NumberOfOpenCreditLinesAndLoans'], df22['NumberOfOpenCreditLinesAndLoans'], equal_var=False))
+    d = df21['NumberOfOpenCreditLinesAndLoans'] - df22['NumberOfOpenCreditLinesAndLoans']
+    # print(stats.wilcoxon(d, alternative='greater'))
