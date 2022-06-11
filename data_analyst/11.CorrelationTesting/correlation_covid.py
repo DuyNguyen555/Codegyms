@@ -31,8 +31,10 @@ if __name__ == '__main__':
     
     # tiến hành tính các khoảng tứ phân vị của population
     q1, q2, q3  = df1.population.quantile(0.25), df1.population.quantile(0.5), df1.population.quantile(0.75)
+    
     # tiến hành biến đổi population
     df1['population_ordinal']=df1.population.apply(population_order)
+    
     # print(df1)
     r, pvalue = stats.spearmanr(df1.cases, df1.population_ordinal)
     print()
