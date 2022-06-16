@@ -1,6 +1,16 @@
 import pandas as pd
 from scipy import stats
 
+def price_order(data):
+    if data < q1:
+        return 1
+    elif data >= q1 and data < q2:
+        return 2
+    elif data >= q2 and data < q3:
+        return 3
+    else:
+        return 4
+
 if __name__ == '__main__':
     df = pd.read_excel('11.CorrelationTesting\data\house_price_dống-da.xlsx')
     
@@ -37,8 +47,8 @@ if __name__ == '__main__':
     df4 = df.filter(['area', 'price', 'lat', 'long'])
     df4.dropna(inplace=True)
     df4['million/1^m'] = df4.area * df4.price
-    # print(df4)
+    q1, q2, q3 = df4['million/1^m'].quantile(0.25), df4['million/1^m'].quantile(0.5), df4['million/1^m'].quantile(0.75)
+    df4['price_order'] = df4['million/1^m'].apply(price_order)
     print("million/1^m vs lat, long:")
-    print(stats.pearsonr(df4['million/1^m'], df4['lat']))
-    print(stats.pearsonr(df4['million/1^m'], df4['long']))
-    # Vì pvalue > 5% nên giữa hai thuộc tính này không có tính tương quan với nhau
+    print(stats.spearmanr(df4['million/1^m'], df4['lat']))
+    print(stats.spearmanr(df4['million/1^m'], df4['long']))
