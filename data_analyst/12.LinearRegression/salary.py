@@ -8,11 +8,11 @@ import pickle # thư viện  giúp lưu trữ mô hình
 
 if __name__ == '__main__':
     dataset = pd.read_csv('12.LinearRegression\data\salary_data.csv')
-    # dataset.plot(x='SoNamKinhNghiem', y='Luong', style='o')
-    # plt.title('Số năm kinh nghiệm - lương')
-    # plt.xlabel('Số năm kinh nghiệm')
-    # plt.ylabel("Lương")
-    # plt.show()
+    dataset.plot(x='SoNamKinhNghiem', y='Luong', style='o')
+    plt.title('Số năm kinh nghiệm - lương')
+    plt.xlabel('Số năm kinh nghiệm')
+    plt.ylabel("Lương")
+    plt.show()
     
     df_keToan = dataset[dataset["NganhNghe"] == "KeToan"]
     df_hcnh = dataset[dataset["NganhNghe"] == "HCNS"]
