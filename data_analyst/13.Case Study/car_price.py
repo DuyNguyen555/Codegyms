@@ -66,8 +66,8 @@ if __name__ == '__main__':
     # Đánh giá mô hình
     mse = mean_squared_error(y_train, np.array(pred))
     mae = mean_absolute_error(y_train, np.array(pred))
-    # print('mse',mse)
-    # print('mae', mae)
+    print('mse',mse)
+    print('mae', mae)
 
     
     # Xử lý dữ liệu trc khi training mô hình
