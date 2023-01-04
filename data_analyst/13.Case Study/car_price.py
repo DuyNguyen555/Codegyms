@@ -10,7 +10,6 @@ def normalize(df):
     max_column = df.max()
     min_column = df.min()
     df_nor = (df - df.min()) / (df.max() - df.min())
-    
     return max_column, min_column, df_nor
 
 if __name__ == '__main__':

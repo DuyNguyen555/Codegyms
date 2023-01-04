@@ -62,7 +62,7 @@ class Continuous_clock():
         """Work"""
         global pen2
         pen2 = Turtle()
-        pen2.pensize(2)
+        pen2.pensize(3)
         pen2.hideturtle()
         angle_second = (time_clock_second / count_angle_second) * 360
         angle_minutes = (time_clock_minutes / count_angle_minutes) * 360
